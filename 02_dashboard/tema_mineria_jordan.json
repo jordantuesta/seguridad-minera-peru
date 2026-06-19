@@ -1,0 +1,187 @@
+{
+  "name": "Minería Peruana · Jordan Tuesta",
+  "dataColors": [
+    "#1A3A5C",
+    "#D85A30",
+    "#EF9F27",
+    "#1D9E75",
+    "#378ADD",
+    "#2A5A8A",
+    "#85B7EB",
+    "#BA7517",
+    "#993C1D",
+    "#0F6E56"
+  ],
+  "background": "#F0F4F8",
+  "foreground": "#1A3A5C",
+  "tableAccent": "#D85A30",
+  "good": "#1D9E75",
+  "neutral": "#EF9F27",
+  "bad": "#D85A30",
+  "maximum": "#1A3A5C",
+  "center": "#378ADD",
+  "minimum": "#85B7EB",
+  "null": "#E0E5EC",
+  "textClasses": {
+    "callout": {
+      "fontSize": 28,
+      "fontFace": "Segoe UI",
+      "color": "#1A3A5C"
+    },
+    "title": {
+      "fontSize": 13,
+      "fontFace": "Segoe UI",
+      "color": "#1A3A5C"
+    },
+    "header": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#7A8A9A"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#7A8A9A"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "fontFamily": [{ "value": "Segoe UI" }],
+        "fontSize": [{ "value": 11 }]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{ "solid": { "color": "#F0F4F8" } }],
+        "outspace": [{ "solid": { "color": "#E4E8EF" } }]
+      }
+    },
+    "card": {
+      "*": {
+        "calloutValue": [{
+          "fontSize": 28,
+          "fontFamily": "Segoe UI",
+          "color": { "solid": { "color": "#1A3A5C" } }
+        }],
+        "label": [{
+          "fontSize": 10,
+          "color": { "solid": { "color": "#7A8A9A" } }
+        }],
+        "background": [{ "solid": { "color": "#FFFFFF" } }],
+        "border": [{
+          "show": true,
+          "color": { "solid": { "color": "#E0E5EC" } },
+          "radius": 8,
+          "width": 1
+        }]
+      }
+    },
+    "lineChart": {
+      "*": {
+        "lineStyles": [{
+          "strokeWidth": 2,
+          "lineStyle": "solid"
+        }],
+        "plotArea": [{
+          "background": [{ "solid": { "color": "#FFFFFF" } }]
+        }],
+        "categoryAxis": [{
+          "gridlineColor": { "solid": { "color": "#EEF1F5" } },
+          "labelColor": { "solid": { "color": "#7A8A9A" } }
+        }],
+        "valueAxis": [{
+          "gridlineColor": { "solid": { "color": "#EEF1F5" } },
+          "labelColor": { "solid": { "color": "#7A8A9A" } }
+        }]
+      }
+    },
+    "areaChart": {
+      "*": {
+        "plotArea": [{
+          "background": [{ "solid": { "color": "#FFFFFF" } }]
+        }],
+        "categoryAxis": [{
+          "gridlineColor": { "solid": { "color": "#EEF1F5" } },
+          "labelColor": { "solid": { "color": "#7A8A9A" } }
+        }],
+        "valueAxis": [{
+          "gridlineColor": { "solid": { "color": "#EEF1F5" } },
+          "labelColor": { "solid": { "color": "#7A8A9A" } }
+        }]
+      }
+    },
+    "barChart": {
+      "*": {
+        "plotArea": [{
+          "background": [{ "solid": { "color": "#FFFFFF" } }]
+        }],
+        "categoryAxis": [{
+          "gridlineColor": { "solid": { "color": "#EEF1F5" } },
+          "labelColor": { "solid": { "color": "#7A8A9A" } }
+        }],
+        "valueAxis": [{
+          "gridlineColor": { "solid": { "color": "#EEF1F5" } },
+          "labelColor": { "solid": { "color": "#7A8A9A" } }
+        }]
+      }
+    },
+    "donutChart": {
+      "*": {
+        "legend": [{
+          "fontSize": 10,
+          "labelColor": { "solid": { "color": "#1A3A5C" } }
+        }],
+        "dataLabels": [{
+          "color": { "solid": { "color": "#FFFFFF" } },
+          "fontSize": 10
+        }]
+      }
+    },
+    "tableEx": {
+      "*": {
+        "header": [{
+          "fontColor": { "solid": { "color": "#FFFFFF" } },
+          "backColor": { "solid": { "color": "#1A3A5C" } },
+          "fontSize": 10,
+          "fontFamily": "Segoe UI"
+        }],
+        "values": [{
+          "fontColorPrimary": { "solid": { "color": "#1A3A5C" } },
+          "backColorPrimary": { "solid": { "color": "#FFFFFF" } },
+          "fontColorSecondary": { "solid": { "color": "#1A3A5C" } },
+          "backColorSecondary": { "solid": { "color": "#F0F4F8" } },
+          "fontSize": 10
+        }]
+      }
+    },
+    "slicer": {
+      "*": {
+        "data": [{
+          "fontColor": { "solid": { "color": "#1A3A5C" } },
+          "background": { "solid": { "color": "#FFFFFF" } },
+          "textSize": 10
+        }],
+        "selection": [{
+          "selectAllCheckboxEnabled": true
+        }],
+        "header": [{
+          "fontColor": { "solid": { "color": "#7A8A9A" } },
+          "background": { "solid": { "color": "#FFFFFF" } },
+          "textSize": 10,
+          "show": true
+        }]
+      }
+    },
+    "keyDriversVisual": {
+      "*": {
+        "background": [{ "solid": { "color": "#FFFFFF" } }],
+        "border": [{
+          "show": true,
+          "color": { "solid": { "color": "#E0E5EC" } },
+          "radius": 8
+        }]
+      }
+    }
+  }
+}
