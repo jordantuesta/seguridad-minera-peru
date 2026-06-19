@@ -180,7 +180,7 @@ python alerta_mineria.py
 
 **Jordan Tuesta** · Ingeniero Químico · Especialista en automatización de procesos
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-jordan--tuesta-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/jordan-tuesta)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-jordan--tuesta-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/jordan-tuesta-farfan/)
 [![Gmail](https://img.shields.io/badge/Gmail-jordantuesta@gmail.com-D14836?style=flat-square&logo=gmail)](mailto:jordantuesta@gmail.com)
 
 ---
