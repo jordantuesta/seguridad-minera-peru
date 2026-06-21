@@ -64,19 +64,45 @@ Datos crudos MINEM (CSV)
 
 ---
 
+## 🖼️ Vista del dashboard
+
+### Dashboard completo
+
+![Dashboard completo](02_dashboard/dashboard_completo.png)
+
+### Mapa de calor y KPIs detallados
+
+![Detalle KPIs y mapa](02_dashboard/detalle_kpis_mapa.png)
+
+### Elementos influyentes clave (IA integrada)
+
+![Elementos influyentes IA](02_dashboard/elementos_influyentes_ia.png)
+
+### Sistema de alerta automática — email recibido
+
+![Email de alerta](02_dashboard/email_alerta_sistema.png)
+
+---
+
 ## 📁 Estructura del repositorio
 
 ```
 seguridad-minera-peru/
 ├── 📁 01_python/
-│   ├── limpieza_datos.ipynb     # Notebook completo de limpieza y EDA
-│   └── alerta_mineria.py        # Script de alerta automática por email
+│   ├── limpieza_datos.ipynb       # Notebook completo de limpieza y EDA
+│   └── alerta_mineria.py          # Script de alerta automática por email
 ├── 📁 02_dashboard/
-│   └── tema_mineria_jordan.json # Tema personalizado Power BI
+│   ├── tema_mineria_jordan.json   # Tema personalizado Power BI
+│   ├── dashboard_completo.png     # Captura del dashboard final
+│   ├── detalle_kpis_mapa.png      # Detalle de KPIs y mapa de calor
+│   ├── elementos_influyentes_ia.png  # Visual de IA en acción
+│   └── email_alerta_sistema.png   # Email de alerta generado
 ├── 📁 03_datos/
-│   └── README_datos.md          # Instrucciones para obtener datos MINEM
+│   └── README_datos.md            # Instrucciones para obtener datos MINEM
 └── README.md
 ```
+
+> 📌 El archivo `.pbix` no se incluye en el repositorio por su tamaño y porque contiene una conexión local a datos. El tema (`tema_mineria_jordan.json`) y las capturas permiten reproducir el diseño completo siguiendo la guía de medidas DAX abajo.
 
 ---
 
@@ -180,7 +206,7 @@ python alerta_mineria.py
 
 **Jordan Tuesta** · Ingeniero Químico · Especialista en automatización de procesos
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-jordan--tuesta-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/jordan-tuesta-farfan/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-jordan--tuesta-0077B5?style=flat-square&logo=linkedin)]([https://linkedin.com/in/jordan-tuesta](https://www.linkedin.com/in/jordan-tuesta-farfan/))
 [![Gmail](https://img.shields.io/badge/Gmail-jordantuesta@gmail.com-D14836?style=flat-square&logo=gmail)](mailto:jordantuesta@gmail.com)
 
 ---
