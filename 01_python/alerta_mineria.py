@@ -3,7 +3,7 @@
 SISTEMA DE ALERTA AUTOMÁTICA - SEGURIDAD MINERA PERÚ
 =============================================================
 Pipeline: Python (limpieza) → Power BI (análisis) → Python (alerta)
-Autor: Jordan Tuesta | Ingeniero Industrial UNI
+Autor: Jordan Tuesta
 Fuente de datos: MINEM 2002-2021 | 901 registros
 =============================================================
 """
@@ -13,18 +13,15 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime
-
-# =============================================================
+#from google.colab import files
+#archivo = files.upload() -- Estos dos pasos los puede ejecutar si necesita subir un archivo con nombre diferente pero mismas columnas!
 # CONFIGURACIÓN - Editar antes de ejecutar
-# =============================================================
-REMITENTE = "jordantuesta@gmail.com"
-CONTRASENA = "tu_contraseña_de_aplicacion"   # Ver instrucciones abajo
-DESTINATARIO = "jordantuesta@gmail.com"       # Cambia al jefe de seguridad
-RUTA_CSV = "accidentes_FINAL_powerbi.csv"
+REMITENTE = "jordantuesta@gmail.com" # Ingresar su correo remitente.
+CONTRASENA = "haoq pany omjt luvc"   # Ingresar la contraseña de aplicaciones obtenida desde el gmail.
+DESTINATARIO = "jordantuesta@gmail.com"       # Ingresar separado por ";" los correos de interés.
+RUTA_CSV = "accidentes_FINAL_powerbi.csv"  # Si cambia el nombre del archivo modifiquelo aquí.
 
-# =============================================================
 # PASO 1 - Cargar y preparar datos
-# =============================================================
 def cargar_datos(ruta):
     df = pd.read_csv(ruta, encoding="utf-8")
     df.columns = df.columns.str.strip().str.upper()
@@ -32,9 +29,7 @@ def cargar_datos(ruta):
     df["MES"] = pd.to_numeric(df["MES"], errors="coerce")
     return df
 
-# =============================================================
 # PASO 2 - Calcular métricas
-# =============================================================
 def calcular_metricas(df):
     # Excluir años del gap (2017-2019) del promedio histórico
     df_sin_gap = df[~df["AÑO"].isin([2017, 2018, 2019])]
@@ -73,9 +68,8 @@ def calcular_metricas(df):
         "es_alerta": accidentes_mes_actual > promedio_historico
     }
 
-# =============================================================
 # PASO 3 - Generar HTML del email
-# =============================================================
+
 def generar_html(m):
     if m["es_alerta"]:
         color_header = "#D85A30"
@@ -98,7 +92,7 @@ def generar_html(m):
         9:"Septiembre",10:"Octubre",11:"Noviembre",12:"Diciembre"
     }
     nombre_mes = nombres_meses.get(m["ultimo_mes"], str(m["ultimo_mes"]))
-
+ # Para la creación del archivo de html pueden pedirle a cualquier IA que con un modelo del correo que deseen e insertando el codigo de hasta arriba para que les haga una vista personalizada.
     html = f"""
 <!DOCTYPE html>
 <html>
@@ -111,7 +105,7 @@ def generar_html(m):
         ⛏ Sistema de Alerta · Seguridad Minera Perú
       </h2>
       <p style="color:#8FBCD4;margin:5px 0 0;font-size:11px">
-        Elaborado por Jordan Tuesta · Ingeniero Industrial UNI · Pipeline automatizado con Python
+        Elaborado por Jordan Tuesta · Pipeline automatizado con Python
       </p>
     </div>
 
@@ -175,7 +169,7 @@ def generar_html(m):
       <p style="color:#8FBCD4;font-size:10px;margin:0;line-height:1.6">
         Generado automáticamente · {datetime.now().strftime('%d/%m/%Y %H:%M')}<br>
         Pipeline: Python (limpieza + alerta) → Power BI (análisis interactivo)<br>
-        Datos: MINEM 2002–2021 · {m['total_historico']} registros · Jordan Tuesta · Ing. Industrial UNI
+        Datos: MINEM 2002–2021 · {m['total_historico']} registros · Jordan Tuesta
       </p>
     </div>
 
@@ -185,9 +179,8 @@ def generar_html(m):
 """
     return html
 
-# =============================================================
 # PASO 4 - Enviar email via Gmail SMTP
-# =============================================================
+
 def enviar_email(metricas, remitente, contrasena, destinatario):
     nombres_meses = {
         1:"Ene",2:"Feb",3:"Mar",4:"Abr",5:"May",6:"Jun",
@@ -217,13 +210,12 @@ def enviar_email(metricas, remitente, contrasena, destinatario):
         print(f"❌ Error al enviar email: {e}")
         print("   Verifica la contraseña de aplicación de Gmail (ver instrucciones)")
 
-# =============================================================
 # PASO 5 - Ejecutar pipeline completo
-# =============================================================
+
 if __name__ == "__main__":
     print("=" * 55)
     print("SISTEMA DE ALERTA - SEGURIDAD MINERA PERÚ")
-    print("Autor: Jordan Tuesta | Ing. Industrial UNI")
+    print("Autor: Jordan Tuesta")
     print("=" * 55)
 
     print("\n📂 Cargando datos MINEM...")
